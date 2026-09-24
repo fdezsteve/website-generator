@@ -1,0 +1,9 @@
+---
+import { cafe } from "../data/cafe";
+---
+<footer class="site-footer">
+  <div class="footer-mark">A&L</div>
+  <div><strong>{cafe.address}</strong><br />{cafe.hours[0][1]} weekdays · {cafe.hours[1][1]} weekends</div>
+  <div><a href="/menu">Menu</a><br /><a href="/visit">Plan your visit</a></div>
+  <small>{cafe.note}</small>
+</footer>
