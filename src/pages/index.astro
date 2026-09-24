@@ -1,21 +1,18 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Photo from "../components/Photo.astro";
+import MenuExplorer from "../components/MenuExplorer";
+import { cafe } from "../data/cafe";
 ---
-
-<BaseLayout
-  title="Website Generator"
-  description="Benchmark renderer for the Website Generator."
->
-  <main class="mx-auto flex min-h-screen max-w-4xl items-center px-6 py-20">
-    <section>
-      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.14em]">Renderer ready</p>
-      <h1 class="max-w-3xl text-5xl font-semibold tracking-tight sm:text-7xl">
-        Website Generator
-      </h1>
-      <p class="mt-6 max-w-2xl text-lg leading-8">
-        Astro, TypeScript, Tailwind CSS v4 and Playwright are scaffolded. The first
-        benchmark will replace this diagnostic page.
-      </p>
-    </section>
-  </main>
+<BaseLayout title="Alder & Lane — Neighbourhood café" description="A fictional café benchmark for the Website Generator.">
+  <SiteHeader current="home" /><main>
+    <section class="opening"><div class="opening__title"><p class="kicker">Fitzroy · seven days</p><h1>Breakfast,<br/>lunch &<br/><em>good coffee.</em></h1></div><Photo kind="interior" alt="Warm café interior photography placeholder" class="opening__photo" /><div class="opening__utility"><p>{cafe.strapline}</p><dl><div><dt>Weekdays</dt><dd>7–3</dd></div><div><dt>Weekends</dt><dd>8–3</dd></div></dl><a class="arrow-link" href="/visit">18 Alder Lane <span>↗</span></a></div></section>
+    <section class="manifesto"><p class="kicker">At the table</p><p class="display-copy">Food that follows the season. Coffee we care about. A room made for staying a little longer.</p></section>
+    <section class="food-story"><Photo kind="breakfast" alt="Seasonal breakfast photography placeholder" class="food-story__large" /><div class="food-story__note"><span>01</span><p>Breakfast starts simple: good bread, soft eggs, something green, something from the market.</p></div><Photo kind="pastry" alt="Fresh pastry photography placeholder" class="food-story__small" /></section>
+    <MenuExplorer client:load />
+    <section class="place"><div><p class="kicker">The room</p><h2>Come as you are.<br/>Stay for another.</h2><p>Morning light, an open kitchen and enough room for a quiet coffee or a noisy table.</p></div><Photo kind="people" alt="People enjoying the café photography placeholder" /></section>
+    <section class="visit-strip"><p class="kicker">Today</p><h2>Open until 3.</h2><p>{cafe.address}</p><a class="arrow-link" href="/visit">Plan your visit <span>↗</span></a></section>
+  </main><SiteFooter />
 </BaseLayout>
