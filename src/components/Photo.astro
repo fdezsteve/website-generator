@@ -1,0 +1,6 @@
+---
+const { kind, alt, class: className = "" } = Astro.props;
+---
+<div class:list={["photo", "photo--" + kind, className]} role="img" aria-label={alt}>
+  <span class="photo-label" aria-hidden="true">{kind}</span>
+</div>
