@@ -10,7 +10,7 @@ Website ingestion is a separate concern from website generation. The generator s
 
 ## High-Level Pipeline
 
-Discover → Define → Design → Compose → Render → Inspect → Refine → Validate
+Discover → Define → Design → Compose → Interact → Render → Inspect → Refine → Validate
 
 ### 1. Discover
 
@@ -28,19 +28,23 @@ Create the site's visual system before composing complete pages. Define typograp
 
 Build pages from reusable primitives and content. Layouts should be derived from the content rather than selected blindly from a template library.
 
-### 5. Render
+### 5. Interact
+
+Specify purposeful interaction, state changes, motion and dynamic behaviour. Prefer a small number of content-specific interactions over generic effects. Design touch, keyboard and reduced-motion behaviour at the same time.
+
+### 6. Render
 
 Produce actual browser-rendered pages at representative viewport sizes.
 
-### 6. Inspect
+### 7. Inspect
 
 Evaluate the rendered result visually. Do not rely only on source code or component structure.
 
-### 7. Refine
+### 8. Refine
 
 Correct the weakest visual and usability decisions. More than one render/review cycle may be necessary.
 
-### 8. Validate
+### 9. Validate
 
 Run deterministic checks where possible, including type checking, linting, tests, accessibility checks, broken links, image dimensions, metadata and performance checks.
 
@@ -48,7 +52,7 @@ Run deterministic checks where possible, including type checking, linting, tests
 
 Use AI for decisions requiring interpretation. Use deterministic software for decisions that can be checked mechanically.
 
-AI is useful for understanding brand character, selecting an appropriate composition, evaluating visual hierarchy, identifying awkward layouts and determining which information deserves prominence.
+AI is useful for understanding brand character, selecting an appropriate composition, designing content-specific interaction, evaluating visual hierarchy, identifying awkward layouts and determining which information deserves prominence.
 
 Deterministic tooling is preferable for HTML validation, type checking, URL checking, image dimensions, accessibility rules, metadata presence and build verification.
 
