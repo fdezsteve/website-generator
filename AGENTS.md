@@ -33,10 +33,11 @@ For substantial work:
 4. Load only those skills.
 5. Clarify intended behaviour through a specification when necessary.
 6. Implement the smallest coherent solution.
-7. Render the result.
-8. Inspect the rendered website visually.
-9. Refine weak design decisions.
-10. Run automated validation.
+7. Define meaningful interaction where it improves the experience.
+8. Render the result.
+9. Inspect the rendered website visually and interactively.
+10. Refine weak design and interaction decisions.
+11. Run automated validation.
 
 Do not consider a page complete simply because it compiles.
 
@@ -48,6 +49,7 @@ Load detailed instructions only when required.
 - Planning information architecture → `skills/site-planning/SKILL.md`
 - Creating the visual language → `skills/design-system/SKILL.md`
 - Building page layouts → `skills/page-composition/SKILL.md`
+- Designing interaction and motion → `skills/interaction-design/SKILL.md`
 - Responsive behaviour → `skills/responsive-design/SKILL.md`
 - Visual QA → `skills/visual-review/SKILL.md`
 - Accessibility → `skills/accessibility/SKILL.md`
@@ -74,6 +76,10 @@ Typography, spacing, colours, radii, layout widths and component behaviour shoul
 Do not automatically produce gradient hero backgrounds, excessive pill-shaped elements, rows of identical feature cards, meaningless badges, unnecessary floating glass panels, excessive rounded rectangles, repetitive centred headings, arbitrary decorative blobs, identical section structures throughout the page, or huge headings unsupported by content hierarchy.
 
 Any of these may be used when justified by the design, but never as defaults.
+
+### Interaction is intentional
+
+Prefer purposeful, content-specific interaction over static brochure defaults, while avoiding animation for animation's sake. Interactive experiences must remain accessible, responsive and performant. React islands and server capabilities are available when justified; do not hydrate static content unnecessarily.
 
 ### Responsive design is intentional
 
