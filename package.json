@@ -13,12 +13,18 @@
   },
   "dependencies": {
     "@astrojs/check": "latest",
+    "@astrojs/react": "latest",
     "@tailwindcss/vite": "latest",
     "astro": "latest",
+    "motion": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "tailwindcss": "latest",
     "typescript": "latest"
   },
   "devDependencies": {
-    "@playwright/test": "latest"
+    "@playwright/test": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
   }
 }
