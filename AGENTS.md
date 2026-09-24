@@ -8,6 +8,21 @@ The objective is not merely to produce valid HTML or functional components. The 
 
 Avoid generic AI-generated website patterns.
 
+## Governance Integration
+
+This project belongs to the business domain of the shared Governance Layer.
+
+Before substantial architectural or reusable-capability work:
+
+1. Load `drive://governance/GOVERNANCE.md`.
+2. Load `drive://governance/domains/business/GOVERNANCE.md`.
+3. Check `drive://governance/shared/registry/CAPABILITY_REGISTRY.yaml` before creating reusable capabilities.
+4. Use the canonical project record at `drive://governance/projects/website-generator/manifest.yaml` once present.
+5. Keep code, skills, tests and technical ADRs canonical in this repository; do not duplicate them into Drive.
+6. Use the business reference folder `_Business/Website Generator/` for long-lived non-code reference material and assets.
+
+Website ingestion remains a separate project. Exchange data through explicit structured contracts rather than coupling this generator to ingester internals.
+
 ## Working Method
 
 For substantial work:
